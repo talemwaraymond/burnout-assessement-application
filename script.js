@@ -19,15 +19,22 @@ function handleSubmit(event) {
     
     const q1 = parseInt(document.getElementById('q1').value);
     const q2 = parseInt(document.getElementById('q2').value);
+    const q3 = parseInt(document.getElementById('q3').value);
+    const q4 = parseInt(document.getElementById('q4').value);
+    const q5 = parseInt(document.getElementById('q5').value);
+    const q6 = parseInt(document.getElementById('q6').value);
+    const q7 = parseInt(document.getElementById('q7').value);
+    const q8 = parseInt(document.getElementById('q8').value);
     
-    const score = calculateScore(q1, q2);
+    
+    const score = calculateScore(q1, q2 ,q3, q4, q4, q5, q6, q7, q8);
     displayResults(score);
 }
 
 // Score Calculation Function
-function calculateScore(q1, q2) {
+function calculateScore(q1, q2, q3, q4, q4, q5, q6, q7, q8) {
     // Simple scoring algorithm (to be replaced with a more complex one)
-    return q1 + q2;
+    return q1 + q2 +q3 + q4 + q4 + q5 + q6 + q7 + q8;
 }
 
 // Display Results Function
@@ -46,7 +53,7 @@ function getRecommendations(score) {
         return 'Consider speaking with a therapist or using stress management techniques.';
     }
 }
-
+ 
 // Show Privacy Policy
 function showPrivacyPolicy(event) {
     event.preventDefault();
