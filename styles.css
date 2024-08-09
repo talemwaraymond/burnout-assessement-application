@@ -10,6 +10,45 @@ body {
     min-height: 100vh;
 }
 
+/* Banner Section Styling */
+#banner-section {
+    background-image: url('https://cdn.pixabay.com/photo/2024/05/09/19/41/man-8751709_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.banner-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+    padding: 2rem;
+    display: inline-block;
+}
+
+.banner-content h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.banner-content p {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+}
+
+/* Responsive Banner Text */
+@media (max-width: 900px) {
+    .banner-content h2 {
+        font-size: 1.5rem;
+    }
+    .banner-content p {
+        font-size: 1rem;
+    }
+}
+
+
 header {
     background-color: #007bff;
     color: white;
