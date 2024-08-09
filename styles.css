@@ -9,6 +9,50 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+body {
+    font-family: Arial, sans-serif;
+}
+
+.icon-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.icon-box {
+    text-align: center;
+    padding: 20px;
+    border-right: 1px solid #eee;
+    flex: 1;
+}
+
+.icon-box:last-child {
+    border-right: none;
+}
+
+.icon-container {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px;
+}
+
+.icon-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    color: #ae4067;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.icon-box:hover p {
+    text-decoration: underline;
+}
 
 /* Banner Section Styling */
 #banner-section {
@@ -50,7 +94,7 @@ body {
 
 
 header {
-    background-color: #007bff;
+    background-color: #bdba25;
     color: white;
     padding: 1rem;
     text-align: center;
