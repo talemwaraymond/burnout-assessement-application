@@ -14,6 +14,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -66,6 +67,7 @@ body {
         margin-top: 10px;
     }
 }
+/*about-us*/
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -129,8 +131,6 @@ button:hover {
         max-width: 100%;
     }
 }
-
-
 .about-burnout-section {
     padding: 50px;
     background-color: #f5f5f5;
@@ -138,14 +138,77 @@ button:hover {
     color: #333;
     line-height: 1.6;
 }
-
-.about-burnout-section h2 {
-    text-align: center;
-    color: #c0392b;
-    margin-bottom: 30px;
-    font-size: 2.5em;
+/*causes of burnout*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
 }
 
+.vc_column-inner {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.wpb_wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h3 {
+    font-size: 28px;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+li::before {
+    content: "\2022";
+    color: #b54668;
+    font-weight: bold;
+    display: inline-block; 
+    width: 20px;
+    position: absolute;
+    left: 0;
+}
+
+strong {
+    font-weight: bold;
+    color: #003366;
+}
+
+@media (max-width: 768px) {
+    .vc_column-inner {
+        padding: 15px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    li {
+        font-size: 14px;
+    }
+}
+
+/*burnout statistics*/
 .burnout-explanation, .burnout-statistics {
     margin-bottom: 40px;
 }
