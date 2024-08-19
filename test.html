@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burnout Assessment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="quiz-header">
+            <div class="progress-circle">
+                <span id="question-number">01</span>
+            </div>
+            <h2>Burnout Assessment</h2>
+        </div>
+        
+        <form id="assessment-form">
+            <div class="question-section">
+                <div class="emoji">
+                    <img id="emoji" src="path-to-exhausted-emoji.png" alt="Exhausted Emoji">
+                </div>
+                <h3 id="question-text">At work, I feel mentally exhausted</h3>
+            </div>
+            <div class="options">
+                <button type="button" class="option" data-score="5">Always</button>
+                <button type="button" class="option" data-score="4">Often</button>
+                <button type="button" class="option" data-score="3">Sometimes</button>
+                <button type="button" class="option" data-score="2">Rarely</button>
+                <button type="button" class="option" data-score="1">Never</button>
+            </div>
+            <button type="button" id="submit-btn" class="hidden">Submit</button>
+        </form>
+        
+        <div id="results-section" class="hidden">
+            <h3>Your Results</h3>
+            <div id="results"></div>
+            <div id="recommendations"></div>
+            <div id="support-link">
+                <a href="support.html">Receive Personalized Tips and Access Professional Support</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.progress-circle {
+    background-color: #0066cc;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.question-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.emoji img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.option.selected, .option:hover {
+    background-color: #0066cc;
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+#results-section {
+    text-align: center;
+}
+
+#results-section h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+#results {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#recommendations {
+    font-size: 16px;
+    color: #555;
+}
+
+#support-link a {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+#submit-btn {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+    </style>
+</body>
+</html>

@@ -1,6 +1,6 @@
 // script.js
 
-// DOM Elements
+/* DOM Elements
 const assessmentForm = document.getElementById('assessment-form');
 const resultsSection = document.getElementById('results-section');
 const resultsDiv = document.getElementById('results');
@@ -92,9 +92,105 @@ function renderChart() {
         }
     });
 }
-/*contact us */
+/*contact us 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
     // Handle form submission, like sending data to a server
     alert('Form submitted successfully!');
 });
+/** */
+$(document).ready(function() {
+    const questions = [
+        {
+            text: "At work, I feel mentally exhausted",
+            emoji: "path-to-exhausted-emoji.png"
+        },
+        {
+            text: "Everything I do at work requires a great deal of effort",
+            emoji: "path-to-effort-emoji.png"
+        },
+        {
+            text: "After a day at work, I find it hard to recover my energy",
+            emoji: "path-to-recovery-emoji.png"
+        },
+        {
+            text: "At work, I feel physically exhausted",
+            emoji: "path-to-physically-exhausted-emoji.png"
+        },
+        {
+            text: "When I get up in the morning, I lack the energy to start a new day at work",
+            emoji: "path-to-lack-energy-emoji.png"
+        },
+        {
+            text: "I want to be active at work, but somehow I am unable to manage",
+            emoji: "path-to-unable-manage-emoji.png"
+        },
+        {
+            text: "When I exert myself at work, I quickly get tired",
+            emoji: "path-to-get-tired-emoji.png"
+        },
+        {
+            text: "At the end of my working day, I feel mentally exhausted and drained",
+            emoji: "path-to-drained-emoji.png"
+        }
+    ];
+
+    let currentQuestionIndex = 0;
+    let totalScore = 0;
+
+    function loadQuestion() {
+        if (currentQuestionIndex < questions.length) {
+            $('#question-number').text(`0${currentQuestionIndex + 1}`);
+            $('#question-text').text(questions[currentQuestionIndex].text);
+            $('#emoji').attr('src', questions[currentQuestionIndex].emoji);
+            if (currentQuestionIndex === questions.length - 1) {
+                $('#submit-btn').removeClass('hidden');
+            }
+        } else {
+            showResults();
+        }
+    }
+
+    $('.option').on('click', function() {
+        const score = parseInt($(this).attr('data-score'));
+        totalScore += score;
+
+        $(this).siblings().removeClass('selected');
+        $(this).addClass('selected');
+
+        setTimeout(() => {
+            currentQuestionIndex++;
+            loadQuestion();
+        }, 300);
+    });
+
+    $('#submit-btn').on('click', function() {
+        showResults();
+    });
+
+    function showResults() {
+        $('#assessment-form').addClass('hidden');
+        $('#results-section').removeClass('hidden');
+
+        let resultsText = '';
+        let recommendationsText = '';
+
+        if (totalScore <= 16) {
+            resultsText = "Your burnout level is low.";
+            recommendationsText = "Keep maintaining your current work-life balance and take regular breaks.";
+        } else if (totalScore <= 32) {
+            resultsText = "You may be experiencing moderate burnout.";
+            recommendationsText = "Consider implementing stress management techniques and seeking support.";
+        } else {
+            resultsText = "You are likely experiencing high burnout.";
+            recommendationsText = "It is important to take immediate action. Consider speaking with a mental health professional and evaluating your workload.";
+        }
+
+        $('#results').text(resultsText);
+        $('#recommendations').text(recommendationsText);
+    }
+
+    // Initialize the first question
+    loadQuestion();
+});
+
