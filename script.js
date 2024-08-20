@@ -225,4 +225,29 @@ window.addEventListener('scroll', function() {
     });
 });
 
+/*contus */
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Collecting form data
+    const facility = document.getElementById('facility').value;
+    const type = document.getElementById('type').value;
+    const firstName = document.getElementById('first-name').value;
+    const lastName = document.getElementById('last-name').value;
+    const email = document.getElementById('email').value;
+    const phoneNumber = document.getElementById('phone-number').value;
+    const message = document.getElementById('message').value;
+
+    // Basic form validation
+    if (!facility || !type || !firstName || !lastName || !email || !phoneNumber) {
+        alert("Please fill out all required fields.");
+        return;
+    }
+
+    // Form submission simulation
+    alert("Thank you for contacting us, " + firstName + "! We will get back to you shortly.");
+    
+    // Clear the form
+    document.getElementById('contact-form').reset();
+});
 
