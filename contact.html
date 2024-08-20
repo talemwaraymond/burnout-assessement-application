@@ -28,12 +28,12 @@
     </header>
     <section class="contact-us">
         <h1>Contact Us</h1>
-        <form id="contact-form">
+        <form onsubmit ="sendEmail(); reset(); return false;"id="contact-form">
             <div class="form-group">
 
             <div class="form-group">
                 <label for="first-name">First Name *</label>
-                <input type="text" id="first-name" required>
+                <input type="text" id="first-name" required> 
             </div>
 
             <div class="form-group">
@@ -165,7 +165,24 @@ footer {
 
         
     </main>
-        
+        <script> sr=" https://smtpjs.com/v3/smtp.js"</script>
+        <script>
+            function sendEmail(){
+                Email.send({
+    Host : "smtp.gmail.com",
+    Username : "talemwaraymond3@gmail.com",
+    Password : "Raymo36018milly",
+    To : 'talemwaray@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New contact Form Equiry",
+    Body : "Name: " +document.getElementById("name").value
+        Name: " +document.getElementById("name").value
+        Name: " +document.getElementById("name").value
+}).then(
+  message => alert(message)
+);
+            }
+        </script>
 
 </body>
 </html>

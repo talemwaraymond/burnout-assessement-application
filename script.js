@@ -230,8 +230,6 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     event.preventDefault(); // Prevent form submission
 
     // Collecting form data
-    const facility = document.getElementById('facility').value;
-    const type = document.getElementById('type').value;
     const firstName = document.getElementById('first-name').value;
     const lastName = document.getElementById('last-name').value;
     const email = document.getElementById('email').value;
@@ -239,7 +237,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     const message = document.getElementById('message').value;
 
     // Basic form validation
-    if (!facility || !type || !firstName || !lastName || !email || !phoneNumber) {
+    if (!type || !firstName || !lastName || !email || !phoneNumber) {
         alert("Please fill out all required fields.");
         return;
     }
