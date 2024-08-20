@@ -193,4 +193,19 @@ $(document).ready(function() {
     // Initialize the first question
     loadQuestion();
 });
+/*serive page */
+window.addEventListener('scroll', function() {
+    const serviceItems = document.querySelectorAll('.service-item');
+
+    serviceItems.forEach(item => {
+        const rect = item.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            item.style.transform = 'scale(1)';
+            item.style.opacity = '1';
+        } else {
+            item.style.transform = 'scale(0.9)';
+            item.style.opacity = '0';
+        }
+    });
+});
 
