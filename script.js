@@ -103,35 +103,35 @@ $(document).ready(function() {
     const questions = [
         {
             text: "At work, I feel mentally exhausted",
-            emoji: "path-to-exhausted-emoji.png"
+            emoji: "exhausted.png"
         },
         {
             text: "Everything I do at work requires a great deal of effort",
-            emoji: "path-to-effort-emoji.png"
+            emoji: "efforts.png"
         },
         {
             text: "After a day at work, I find it hard to recover my energy",
-            emoji: "path-to-recovery-emoji.png"
+            emoji: "thinking.png"
         },
         {
             text: "At work, I feel physically exhausted",
-            emoji: "path-to-physically-exhausted-emoji.png"
+            emoji: "dizziness.png"
         },
         {
             text: "When I get up in the morning, I lack the energy to start a new day at work",
-            emoji: "path-to-lack-energy-emoji.png"
+            emoji: "weakness.png"
         },
         {
             text: "I want to be active at work, but somehow I am unable to manage",
-            emoji: "path-to-unable-manage-emoji.png"
+            emoji: "system.png"
         },
         {
             text: "When I exert myself at work, I quickly get tired",
-            emoji: "path-to-get-tired-emoji.png"
+            emoji: "fatigue.png"
         },
         {
             text: "At the end of my working day, I feel mentally exhausted and drained",
-            emoji: "path-to-drained-emoji.png"
+            emoji: "burn.png"
         }
     ];
 
